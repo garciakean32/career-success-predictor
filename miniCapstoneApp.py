@@ -19,18 +19,18 @@ for metric, value in metrics.items():
 st.subheader("Try a Prediction")
 
 # Input fields
-age = st.number_input("Age", min_value=18, max_value=60, value=25)
+age = st.number_input("Age", min_value=18, max_value=60, value=18)
 gender = st.selectbox("Gender", gender_encoder.classes_)
-high_gpa = st.slider("High School GPA", 0.0, 4.0, 3.0)
-sat = st.number_input("SAT Score", 400, 1600, 1000)
-ranking = st.number_input("University Ranking", 1, 1000, 100)
-uni_gpa = st.slider("University GPA", 0.0, 4.0, 3.0)
+high_gpa = st.slider("High School GPA", 0.0, 4.0, 0.0)
+sat = st.number_input("SAT Score", 400, 1600, 400)
+ranking = st.number_input("University Ranking", 1, 1000, 1000)
+uni_gpa = st.slider("University GPA", 0.0, 4.0, 0.0)
 field = st.selectbox("Field of Study", field_encoder.classes_)
-internships = st.slider("Internships Completed", 0, 10, 2)
-projects = st.slider("Projects Completed", 0, 20, 5)
-certs = st.slider("Certifications", 0, 10, 1)
-soft = st.slider("Soft Skills Score", 0, 10, 5)
-network = st.slider("Networking Score", 0, 10, 5)
+internships = st.slider("Internships Completed", 0, 10, 0)
+projects = st.slider("Projects Completed", 0, 20, 0)
+certs = st.slider("Certifications", 0, 10, 0)
+soft = st.slider("Soft Skills Score", 0, 10, 0)
+network = st.slider("Networking Score", 0, 10, 0)
 
 # Encode input
 input_data = pd.DataFrame([[
